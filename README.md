@@ -1,5 +1,5 @@
-#Rest Architecture App
-###Requirements:
+# Rest Architecture App
+### Requirements:
 * JDK 18 
 * Apache Tomcat 10.0
 * PostgreSQL
