@@ -3,7 +3,7 @@
 * JDK 18 
 * Apache Tomcat 10.0
 * PostgreSQL
-###Launch instructions
+### Launch instructions
 1. Run script.sql for DB creation
 2. Compile and run Main.java - String application
 3. Compile and run Client.java - REST Client
