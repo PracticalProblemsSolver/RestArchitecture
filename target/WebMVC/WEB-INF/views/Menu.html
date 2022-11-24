@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Main Menu</title>
+    <style>
+        *
+        {
+            text-align: center !important;
+            margin: auto !important;
+        }
+    </style>
+</head>
+<body>
+<h1>Medicine Database Controller</h1>
+<ul style="align-self: center">
+    <li>
+        <a th:href="@{/show}">Show all medicine</a>
+    </li>
+
+    <li>
+        <a th:href="@{/add}">Add a new medicine</a>
+    </li>
+
+    <li>
+        <a th:href="@{/remove}">Delete a medicine</a>
+    </li>
+
+    <li>
+        <a th:href="@{/edit}">Update a medicine</a>
+    </li>
+
+    <li>
+        <a th:href="@{/info}">Show biggest medicine count</a>
+    </li>
+</ul>
+</body>
+</html>

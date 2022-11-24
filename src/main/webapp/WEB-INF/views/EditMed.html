@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Med</title>
+    <style>
+        *
+        {
+            text-align: center !important;
+            margin: auto !important;
+            margin-top: 15px !important;
+        }
+    </style>
+</head>
+<body>
+<h1>Edit the medicament</h1>
+<form th:object="${med}" th:action="@{/edit/{id}(id=${med.getId()})}" th:method="post">
+    <table>
+        <tr>
+            <td>
+                <label for="name">Name</label>
+            </td>
+            <td>
+                <input type="text" id="name" th:field="*{name}"/>
+                <div th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="type">Type</label>
+            </td>
+            <td>
+                <input type="text" id="type" th:field="*{type}"/>
+                <div th:if="${#fields.hasErrors('type')}" th:errors="*{type}"></div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="form">Form</label>
+            </td>
+            <td>
+                <input type="text" id="form" th:field="*{form}"/>
+                <div th:if="${#fields.hasErrors('form')}" th:errors="*{form}"></div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="price">Price</label>
+            </td>
+            <td>
+                <input type="number" id="price" th:field="*{price}"/>
+                <div th:if="${#fields.hasErrors('price')}" th:errors="*{price}"></div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="count">Count</label>
+            </td>
+            <td>
+                <input type="number" id="count" th:field="*{count}"/>
+                <div th:if="${#fields.hasErrors('count')}" th:errors="*{count}"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="Edit">
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

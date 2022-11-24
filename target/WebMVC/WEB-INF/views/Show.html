@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>MedDB</title>
+    <style>
+        *
+        {
+            text-align: center !important;
+            margin: auto !important;
+        }
+    </style>
+</head>
+<body>
+<h1>Medicine Database</h1>
+<table class="database_table">
+    <tr>
+        <th>Id</th>
+        <th>Company</th>
+        <th>Model</th>
+        <th>Screen type</th>
+        <th>Resolution</th>
+        <th>Cost</th>
+    </tr>
+
+    <tr th:each="med: ${meds}">
+        <td th:text="${med.getId()}">Id</td>
+        <td th:text="${med.getName()}">Name</td>
+        <td th:text="${med.getType()}">Type</td>
+        <td th:text="${med.getForm()}">Form</td>
+        <td th:text="${med.getPrice()}">Price</td>
+        <td th:text="${med.getCount()}">Count</td>
+    </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Remove Med</title>
+    <style>
+        *
+        {
+            text-align: center !important;
+            margin: auto !important;
+            margin-top: 15px !important;
+        }
+    </style>
+</head>
+<body>
+<h1>Enter the ID of medicament you want to delete</h1>
+<form th:action="@{/remove}" th:method="post">
+    <label for="id"></label>
+    <input type="number" id="id" th:name="id">
+    <div th:text="${message}"></div>
+    <input type="submit" value="Delete">
+</form>
+
+</body>
+</html>
